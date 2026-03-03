@@ -20,10 +20,10 @@ async function runDemo() {
 
     // 3. SEEDING DE BASE (Organización y Usuario)
     console.log('🌱 Seeding base data...');
-    const org = await OrganizationModel.create({ name: 'Initech', country: 'USA' });
+    const org = await OrganizationModel.create({ name: 'Organitzacio_Exemple', country: 'USA' });
     const user = await UserModel.create({ 
-      name: 'Bill', 
-      email: 'bill@initech.com', 
+      name: 'Andrea', 
+      email: 'andrea@example.com', 
       role: 'ADMIN', 
       organization: org._id 
     });
@@ -35,7 +35,7 @@ async function runDemo() {
 
     // 4.1 CREATE
     const newProject = await projectService.create({
-      name: 'Mongoose Refactor',
+      name: 'Projecte exemple',
       description: 'Implementar Service Layer',
       owner: user._id as any
     });

@@ -10,7 +10,7 @@ export const projectService = {
     return await Project.findById(id).populate('owner').lean().exec();
   },
   
-  update: async (id: string, data: Partial<IProject>) => { // Partial permite pasar solo algunos campos
+  update: async (id: string, data: Partial<IProject>) => { 
     return await Project.findByIdAndUpdate(id, data, { new: true }).lean().exec();
   },
   
@@ -19,7 +19,6 @@ export const projectService = {
   },
   
   listAll: async () => {
-    // .lean() para devolver objetos JS puros (más rápido)
     return await Project.find().lean().exec();
   }
 };
