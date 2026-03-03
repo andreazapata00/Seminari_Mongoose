@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "dev": "tsx src/main.ts",
+  "start": "node dist/main.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+
+
   "dependencies": {
     "mongoose": "^6.13.8"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0"
   }
 }
